@@ -1,19 +1,26 @@
-class Eager{
-    private static Eager ins=new Eager();
+package sadp;
+public class singleton{
+    public static void main(String args[]){
+        // singeltoneObject obj=new singeltoneObject
+        singeltoneObject obj1= singeltoneObject.getins();
+        singeltoneObject obj2= singeltoneObject.getins();
+        singeltoneObject obj3= singeltoneObject.getins();
+                System.out.println(obj1);
+                System.out.println(obj2);
 
-    private Eager(){
-        System.out.println("Hello world");
-    }
+                System.out.println(obj3);
 
-    public static Eager getins(){
-        return ins;
+
+
     }
 }
-
-public class singleton{
-    public static void main(String[] args){
-        Eager e1=Eager.getins();
-       Eager e2=Eager.getins();
-       Eager e3=Eager.getins();
+class singeltoneObject2{
+    private static singeltoneObject ins=new singeltoneObject();
+    private singeltoneObject2(){
+        System.out.println("This is singeltone object");
+    }
+    public static singeltoneObject getins(){
+        // System.out.println("This");
+        return ins;
     }
 }
